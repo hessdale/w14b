@@ -1,19 +1,29 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <display-joke-button></display-joke-button>
+    <normal-joke-button></normal-joke-button>
+    <snake-joke-button></snake-joke-button>
+    <loud-joke-button></loud-joke-button>
+    <get-joke-button></get-joke-button>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import NormalJokeButton from "@/components/NormalJokeButton.vue";
+import SnakeJokeButton from "@/components/SnakeJokeButton.vue";
+import LoudJokeButton from "@/components/LoudJokeButton.vue";
+import GetJokeButton from "@/components/GetJokeButton.vue";
+import DisplayJokeButton from "@/components/DisplayJokeButton.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    NormalJokeButton,
+    SnakeJokeButton,
+    LoudJokeButton,
+    GetJokeButton,
+    DisplayJoke,
+  },
+};
 </script>
 
 <style>

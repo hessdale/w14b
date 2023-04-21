@@ -1,7 +1,6 @@
 <template>
   <div>
-    <button>Normal</button>
-    <p>{{ joke }}</p>
+    <button @click="joke_normal">Normal</button>
   </div>
 </template>
 
@@ -15,8 +14,10 @@ export default {
 
   methods: {
     JokeDisplay: function (joke) {
-      this.joke = undefined;
-      this.joke = joke;
+      this.joke = joke.toLowerCase();
+    },
+    joke_normal: function () {
+      this.$root.$emit(`joke_selected`, this.joke);
     },
   },
   mounted() {
@@ -26,7 +27,4 @@ export default {
 </script>
 
 <style scoped>
-p {
-  text-transform: lowercase;
-}
 </style>

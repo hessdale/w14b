@@ -1,7 +1,6 @@
 <template>
   <div>
-    <button @click="makeloudjoke">Loud</button>
-    <p>{{ joke }}</p>
+    <button @click="joke_loud">Loud</button>
   </div>
 </template>
 
@@ -10,21 +9,16 @@ export default {
   data() {
     return {
       joke: undefined,
-      loudjoke: undefined,
     };
   },
 
   methods: {
     JokeDisplay: function (joke) {
-      this.joke = undefined;
-      this.joke = joke;
-      console.log(joke);
+      this.joke = joke.toUpperCase();
     },
-  },
-  makeloudjoke: function () {
-    let makejoke = this.joke;
-    let loudjoke = makejoke.toUpperCase();
-    console.log(loudjoke);
+    joke_loud: function () {
+      this.$root.$emit(`joke_selected`, this.joke);
+    },
   },
 
   mounted() {

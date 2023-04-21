@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <p @click="sendJoke">sendjoke</p>
-  </div>
+  <div></div>
 </template>
 
 <script>
@@ -26,6 +24,7 @@ export default {
       .then((response) => {
         response;
         this.joke = response.data[0];
+        this.sendJoke();
         console.log(`request success`);
       })
       .catch((error) => {

@@ -19,7 +19,7 @@ export default {
     makelwr() {},
   },
   mounted() {
-    this.$root.$on(`joke_request`, this.JokeDisplay);
+    this.$root.$on(`joke_selected`, this.JokeDisplay);
   },
 };
 </script>

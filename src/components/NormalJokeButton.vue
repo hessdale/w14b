@@ -17,7 +17,6 @@ export default {
     JokeDisplay: function (joke) {
       this.joke = undefined;
       this.joke = joke;
-      console.log(joke);
     },
   },
   mounted() {

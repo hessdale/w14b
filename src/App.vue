@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <display-joke-button></display-joke-button>
     <normal-joke-button></normal-joke-button>
     <snake-joke-button></snake-joke-button>
     <loud-joke-button></loud-joke-button>
     <get-joke-button></get-joke-button>
+    <display-joke></display-joke>
   </div>
 </template>
 
@@ -13,7 +13,8 @@ import NormalJokeButton from "@/components/NormalJokeButton.vue";
 import SnakeJokeButton from "@/components/SnakeJokeButton.vue";
 import LoudJokeButton from "@/components/LoudJokeButton.vue";
 import GetJokeButton from "@/components/GetJokeButton.vue";
-import DisplayJokeButton from "@/components/DisplayJokeButton.vue";
+import DisplayJoke from "@/components/DisplayJoke.vue";
+
 export default {
   name: "App",
   components: {
